@@ -102,14 +102,14 @@ chars = {
 }
 
 def print_grandes(the_string):
-    print(" --{}-- ".format("-" * len(the_string) * 16))
-    print("|  {}  |".format(" " * len(the_string) * 16))
+    print("          --{}-- ".format("-" * len(the_string) * 16))
+    print("         |  {}  |".format(" " * len(the_string) * 16))
     for i in range(0, 8):
         output = ""
         for k in range(0, len(the_string)):
             if the_string[k] in chars:
                 output += chars[the_string[k]][i]
-        print("|  {}  |".format(output))
-    print("|  {}  |".format(" " * len(the_string) * 16))
-    print(" --{}-- ".format("-" * len(the_string) * 16))
+        print("         |  {}  |".format(output))
+    print("        |  {}  |".format(" " * len(the_string) * 16))
+    print("         --{}-- ".format("-" * len(the_string) * 16))
  

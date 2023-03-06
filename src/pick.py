@@ -121,16 +121,16 @@ chars = {
 }
 
 def print_grandes(the_string):
-    print(" --{}-- ".format("-" * len(the_string) * 16))
-    print("|  {}  |".format(" " * len(the_string) * 16))
+    print("          --{}-- ".format("-" * len(the_string) * 16))
+    print("         |  {}  |".format(" " * len(the_string) * 16))
     for i in range(0, 8):
         output = ""
         for k in range(0, len(the_string)):
             if the_string[k] in chars:
                 output += chars[the_string[k]][i]
-        print("|  {}  |".format(output))
-    print("|  {}  |".format(" " * len(the_string) * 16))
-    print(" --{}-- ".format("-" * len(the_string) * 16))
+        print("         |  {}  |".format(output))
+    print("         |  {}  |".format(" " * len(the_string) * 16))
+    print("          --{}-- ".format("-" * len(the_string) * 16))
  
 
 if __name__ == "__main__":
@@ -150,7 +150,9 @@ if __name__ == "__main__":
     while pick in past["past"]:
         pick = random.randrange(range_start, range_end)
 
+    print("\n" * 5)
     print_grandes(str(pick))
+    print("\n" * 5)
     past["past"].append(pick)
 
     with open("picks.json", "w") as past_records:
